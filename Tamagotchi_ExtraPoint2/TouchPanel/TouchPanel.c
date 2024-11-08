@@ -59,7 +59,7 @@ void LPC17xx_SPI_SetSpeed (uint8_t speed)
 
 /*******************************************************************************
 * Function Name  : ADS7843_SPI_Init
-* Description    : ADS7843 SPI ³õÊ¼»¯
+* Description    : ADS7843 SPI åˆå§‹åŒ–
 * Input          : None
 * Output         : None
 * Return         : None
@@ -97,7 +97,7 @@ static void ADS7843_SPI_Init(void)
 
 /*******************************************************************************
 * Function Name  : TP_Init
-* Description    : ADS7843¶Ë¿Ú³õÊ¼»¯
+* Description    : ADS7843ç«¯å£åˆå§‹åŒ–
 * Input          : None
 * Output         : None
 * Return         : None
@@ -113,8 +113,8 @@ void TP_Init(void)
 
 /*******************************************************************************
 * Function Name  : DelayUS
-* Description    : ÑÓÊ±1us
-* Input          : - cnt: ÑÓÊ±Öµ
+* Description    : å»¶æ—¶1us
+* Input          : - cnt: å»¶æ—¶å€¼
 * Output         : None
 * Return         : None
 * Attention		 : None
@@ -124,8 +124,8 @@ static void DelayUS(uint32_t cnt)
   uint32_t i;
   for(i = 0;i<cnt;i++)
   {
-     uint8_t us = 12; /* ÉèÖÃÖµÎª12£¬´óÔ¼ÑÓ1Î¢Ãë */    
-     while (us--)     /* ÑÓ1Î¢Ãë	*/
+     uint8_t us = 12; /* è®¾ç½®å€¼ä¸º12ï¼Œå¤§çº¦å»¶1å¾®ç§’ */    
+     while (us--)     /* å»¶1å¾®ç§’	*/
      {
        ;   
      }
@@ -135,8 +135,8 @@ static void DelayUS(uint32_t cnt)
 
 /*******************************************************************************
 * Function Name  : WR_CMD
-* Description    : Ïò ADS7843Ğ´Êı¾İ
-* Input          : - cmd: ´«ÊäµÄÊı¾İ
+* Description    : å‘ ADS7843å†™æ•°æ®
+* Input          : - cmd: ä¼ è¾“çš„æ•°æ®
 * Output         : None
 * Return         : None
 * Attention		 : None
@@ -158,10 +158,10 @@ static uint8_t WR_CMD (uint8_t cmd)
 
 /*******************************************************************************
 * Function Name  : RD_AD
-* Description    : ¶ÁÈ¡ADCÖµ
+* Description    : è¯»å–ADCå€¼
 * Input          : None
 * Output         : None
-* Return         : ADS7843·µ»Ø¶ş×Ö½ÚÊı¾İ
+* Return         : ADS7843è¿”å›äºŒå­—èŠ‚æ•°æ®
 * Attention		 : None
 *******************************************************************************/
 static int RD_AD(void)  
@@ -181,10 +181,10 @@ static int RD_AD(void)
 
 /*******************************************************************************
 * Function Name  : Read_X
-* Description    : ¶ÁÈ¡ADS7843Í¨µÀX+µÄADCÖµ 
+* Description    : è¯»å–ADS7843é€šé“X+çš„ADCå€¼ 
 * Input          : None
 * Output         : None
-* Return         : ADS7843·µ»ØÍ¨µÀX+µÄADCÖµ
+* Return         : ADS7843è¿”å›é€šé“X+çš„ADCå€¼
 * Attention		 : None
 *******************************************************************************/
 int Read_X(void)  
@@ -201,10 +201,10 @@ int Read_X(void)
 
 /*******************************************************************************
 * Function Name  : Read_Y
-* Description    : ¶ÁÈ¡ADS7843Í¨µÀY+µÄADCÖµ
+* Description    : è¯»å–ADS7843é€šé“Y+çš„ADCå€¼
 * Input          : None
 * Output         : None
-* Return         : ADS7843·µ»ØÍ¨µÀY+µÄADCÖµ
+* Return         : ADS7843è¿”å›é€šé“Y+çš„ADCå€¼
 * Attention		 : None
 *******************************************************************************/
 int Read_Y(void)  
@@ -222,10 +222,10 @@ int Read_Y(void)
 
 /*******************************************************************************
 * Function Name  : TP_GetAdXY
-* Description    : ¶ÁÈ¡ADS7843 Í¨µÀX+ Í¨µÀY+µÄADCÖµ
+* Description    : è¯»å–ADS7843 é€šé“X+ é€šé“Y+çš„ADCå€¼
 * Input          : None
 * Output         : None
-* Return         : ADS7843·µ»Ø Í¨µÀX+ Í¨µÀY+µÄADCÖµ 
+* Return         : ADS7843è¿”å› é€šé“X+ é€šé“Y+çš„ADCå€¼ 
 * Attention		 : None
 *******************************************************************************/
 void TP_GetAdXY(int *x,int *y)  
@@ -240,7 +240,7 @@ void TP_GetAdXY(int *x,int *y)
 
 /*******************************************************************************
 * Function Name  : TP_DrawPoint
-* Description    : ÔÚÖ¸¶¨×ù±ê»­µã
+* Description    : åœ¨æŒ‡å®šåº§æ ‡ç”»ç‚¹
 * Input          : - Xpos: Row Coordinate
 *                  - Ypos: Line Coordinate 
 * Output         : None
@@ -254,7 +254,7 @@ void TP_DrawPoint(uint16_t Xpos,uint16_t Ypos)
 
 /*******************************************************************************
 * Function Name  : DrawCross
-* Description    : ÔÚÖ¸¶¨×ù±ê»­Ê®×Ö×¼ĞÇ
+* Description    : åœ¨æŒ‡å®šåº§æ ‡ç”»åå­—å‡†æ˜Ÿ
 * Input          : - Xpos: Row Coordinate
 *                  - Ypos: Line Coordinate 
 * Output         : None
@@ -283,7 +283,7 @@ void DrawCross(uint16_t Xpos,uint16_t Ypos)
 
 /*******************************************************************************
 * Function Name  : DrawCross
-* Description    : ÔÚÖ¸¶¨×ù±ê»­Ê®×Ö×¼ĞÇ
+* Description    : åœ¨æŒ‡å®šåº§æ ‡ç”»åå­—å‡†æ˜Ÿ
 * Input          : - Xpos: Row Coordinate
 *                  - Ypos: Line Coordinate 
 * Output         : None
@@ -312,10 +312,10 @@ void DeleteCross(uint16_t Xpos,uint16_t Ypos)
 
 /*******************************************************************************
 * Function Name  : Read_Ads7846
-* Description    : µÃµ½ÂË²¨Ö®ºóµÄX Y
+* Description    : å¾—åˆ°æ»¤æ³¢ä¹‹åçš„X Y
 * Input          : None
 * Output         : None
-* Return         : Coordinate½á¹¹ÌåµØÖ·
+* Return         : Coordinateç»“æ„ä½“åœ°å€
 * Attention		 : None
 *******************************************************************************/
 Coordinate *Read_Ads7846(void)
@@ -430,7 +430,7 @@ uint8_t setCalibrationMatrix( Coordinate * displayPtr,
 * Description    : using K A B C D E F 
 * Input          : None
 * Output         : None
-* Return         : ·µ»Ø1±íÊ¾³É¹¦ 0Ê§°Ü
+* Return         : è¿”å›1è¡¨ç¤ºæˆåŠŸ 0å¤±è´¥
 * Attention		 : None
 *******************************************************************************/
 uint8_t getDisplayPoint(Coordinate * displayPtr,
@@ -466,7 +466,7 @@ uint8_t getDisplayPoint(Coordinate * displayPtr,
 
 /*******************************************************************************
 * Function Name  : TouchPanel_Calibrate
-* Description    : Ğ£×¼´¥ÃşÆÁ
+* Description    : æ ¡å‡†è§¦æ‘¸å±
 * Input          : None
 * Output         : None
 * Return         : None
@@ -497,7 +497,7 @@ void TouchPanel_Calibrate(void)
    ScreenSample[i].x = Ptr->x; ScreenSample[i].y = Ptr->y;
 	 DeleteCross(DisplaySample[i].x,DisplaySample[i].y);
   }
-  setCalibrationMatrix( &DisplaySample[0],&ScreenSample[0],&matrix ) ;  /* ËÍÈëÖµµÃµ½²ÎÊı */	   
+  setCalibrationMatrix( &DisplaySample[0],&ScreenSample[0],&matrix ) ;  /* é€å…¥å€¼å¾—åˆ°å‚æ•° */	   
 
 } 
 
