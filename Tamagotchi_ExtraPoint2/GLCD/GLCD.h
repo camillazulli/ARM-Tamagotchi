@@ -4,8 +4,8 @@
 **
 **--------------File Info-------------------------------------------------------------------------------
 ** File name:			GLCD.h
-** Descriptions:		Has been tested SSD1289°¢ILI9320°¢R61505U°¢SSD1298°¢ST7781°¢SPFD5408B°¢ILI9325°¢ILI9328°¢
-**						HX8346A°¢HX8347A
+** Descriptions:		Has been tested SSD1289„ÄÅILI9320„ÄÅR61505U„ÄÅSSD1298„ÄÅST7781„ÄÅSPFD5408B„ÄÅILI9325„ÄÅILI9328„ÄÅ
+**						HX8346A„ÄÅHX8347A
 **------------------------------------------------------------------------------------------------------
 ** Created by:			AVRman
 ** Created date:		2012-3-10
@@ -76,12 +76,12 @@
 
 /******************************************************************************
 * Function Name  : RGB565CONVERT
-* Description    : 24Œª◊™ªª16Œª
+* Description    : 24‰ΩçËΩ¨Êç¢16‰Ωç
 * Input          : - red: R
 *                  - green: G 
 *				   - blue: B
 * Output         : None
-* Return         : RGB —’…´÷µ
+* Return         : RGB È¢úËâ≤ÂÄº
 * Attention		 : None
 *******************************************************************************/
 #define RGB565CONVERT(red, green, blue)\
