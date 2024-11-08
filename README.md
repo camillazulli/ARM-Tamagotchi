@@ -9,7 +9,9 @@ Touching the area in which Tamagotchi is drawn, around at the center of the scre
 The animation lasts 2 seconds, then, game continues its flow.
 # Feature Implementation
 Main libraries used (library from the course material): 
+
 1. 06_sample_TIMER_2
+
 It contains an advanced managment of timers.
 The timer which has been chosen for handling cuddles is TIMER 2. It is initialized to count until 2, in sample.c:
 “init_timer(2, 0, 0, 1, 0x17D7840); //MR = 1s”;
@@ -20,7 +22,9 @@ The function “getDisplayPoint(...)” detecs point’s coordinates, display.x 
 - “LCD_Cuddles(...)”: it enables TIMER 2 and set “is_cuddling” flag to 1, so cuddles animation can start.
 TIMER 2 matches twice, the first one after 1 second. The phrase “I love you!” is written and closed eyes version of Lovelitchi is drawn. Instead, after the second match, the main display is restored.
 At the end of TIMER 2 handler, happiness battery is decremented of one bar.
+
 2. 12_sample_GLCD_TP
+  
 It contains primitive functions for Touchscreen on Landtiger board.
 In sample.c, the functions “TP_Init()” and “TouchPanel_Calibrate()” are invoked to inizialize touchscreen.
 
